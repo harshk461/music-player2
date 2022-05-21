@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+@keyframes rotate {
+  from{
+    transform: rotate(0deg);
+  }
+  to{
+    transform: rotate(360deg);
+  }
+}
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #112B3C;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Lato', sans-serif;
+  margin: 0;
+  transition: all 1s ease-in-out;
+}
+.main-container{
+  display: flex;
+  flex-direction: column;
+  border: none;
+  position: fixed;
+  top:5rem;
+  border-radius: 10px;
+  width: 375px;
+  background-color: #7F8487;
+  padding: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  transition: all 1s ease-in-out;
+}
+.main-container .box1{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+.box1 .icon1,.box1 .icon2{
+  padding: 1rem;
+  border-radius: 100%;
+  background-color: #737779;
+  text-align: center;
+  color: #fff;
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+}
+.box2{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap:1rem;
+  margin-bottom: 2rem;
+}
+.box2 .cover{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.box2 .cover img{
+  border-radius: 100%;
+  width: 250px;
+  height: 250px;
+  animation:rotate 3s 1 ease-in-out;
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+  animation-play-state: running;
+}
+.box2 .detail{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.box2 .detail #name{
+  font-size: 1.5rem;
+  color: #fff;
+  font-weight:600;
+}
+.box2 .detail #artist{
+  font-size: 0.8rem;
+  color: #fff;
+}
+.naviagtion{
+  display: flex;
+  gap:2rem;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+.naviagtion .action-btn{
+  border: none;
+  border-radius: 50%;
+  color: #fff;
+  background-color: #737779;
+  padding: 1.2rem;
+  font-size: 1.3rem;
+
+  text-align: center;
+  cursor: pointer;
+  transition: all 1s ease-in-out;
+}
+.naviagtion #play{
+  background-color: #FF4C29;
+}
+.action-btn{
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+.progress-container {
+  background: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 10px 0;
+  height: 4px;
+  width: 100%;
+  transition: all 1s ease-in-out;
+}
+.progress {
+  background-color: #fe8daa;
+  border-radius: 5px;
+  height: 100%;
+  width: 0%;
+  transition: width 0.1s linear;
+}  
+@media (max-width:400px) {
+  .main-container{
+    width: calc(100% - 40px);
+  }
+}
